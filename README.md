@@ -37,13 +37,13 @@ Procesando ID 3...
 
 Proceso completado. Archivo guardado como 'resultados_sentimiento.csv'
 
-==============================
+------------------------------
       RESUMEN DE SENTIMIENTOS
-==============================
-Positivo    : 1
-Negativo    : 1
-Neutro      : 1
-Error       : 0
-==============================
-*/
+------------------------------
+Positivos   :1
+Negativos   :1
+Neutro      :1
+Error       :0
+
+------------------------------
 */
