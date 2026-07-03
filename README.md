@@ -17,7 +17,7 @@ Creat proyect and select the name example "buenasRespuestas".
 click on Generate key.
 Put attention: in this step copy de key, just in this time show all key of u proyect.</p>
 
-Well, in u cmd, terminal like me apply next command
+Well, in u cmd or terminal ,like me, apply next command
 
 $env:GEMINI_API_KEY="TU_API_KEY_AQUI"
 
