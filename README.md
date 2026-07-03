@@ -1,21 +1,21 @@
 # Analizador de respuestas
 
 
-<h1>Hello!!!<\h1>
+<h1>Hello!!!</h1>
 
 Libreries
 
 - pandas
 - google-genai
 
-For this proyect u need creat a API Key in Google IA Studio,
+<p>For this proyect u need creat a API Key in Google IA Studio,
 Well intro to https://aistudio.google.com/ u need a count from google. 
-Next click on Get API key
-Click on Generate API Key
-Select name of you key default "Gemini API Key 2"
-Creat proyect and select the name example "buenasRespuestas" 
-click on Generate key
-Put attention: in this step copy de key, just in this time show all key of u proyect.
+Next click on Get API key.
+Click on Generate API Key.
+Select name of you key default "Gemini API Key 2".
+Creat proyect and select the name example "buenasRespuestas".
+click on Generate key.
+Put attention: in this step copy de key, just in this time show all key of u proyect.</p>
 
 Well, in u cmd, terminal like me apply next command
 
