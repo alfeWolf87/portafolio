@@ -18,15 +18,15 @@ click on Generate key.
 Put attention: in this step copy de key, just in this time show all key of u proyect.</p>
 
 Well, in u cmd or terminal ,like me, apply next command
-
+--------------------------------------
 $env:GEMINI_API_KEY="TU_API_KEY_AQUI"
-
+--------------------------------------
 to init API on u pc.
 
 now u could run your script
-
+--------------------------------------
 python buenasRespuestas.py
-
+--------------------------------------
 u can look this in cmd if u make all steps correctly.
 
 /*
