@@ -1,0 +1,74 @@
+:root {
+  /* Coordenadas iniciales por defecto */
+  --x: 0px;
+  --y: 0px;
+}
+
+body {
+  margin: 0;
+    min-height: 100vh;
+    background-color: #0a0829; /* Fondo oscuro (estilo Slate/Tailwind) */
+    
+    /* Creamos una capa superior fija que ocupe toda la pantalla */
+    background-image: radial-gradient(
+      600px circle at var(--x) var(--y), 
+      #1d4ed826, /* Color del destello (azul con opacidad baja) */
+      transparent 80%
+    );
+    
+    /* Asegura que el gradiente no se repita y se mueva suavemente */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1, h2, h3, p {
+  margin: 10px; color: #ffffffaa; text-align: left; font-family: 'Arial', sans-serif;
+}
+
+.contenedor-principal {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 75px auto;
+}
+
+.barra-lateral {
+  position: static;
+  top: 0;
+  max-height: 100vh;
+  width: 55%;
+  padding: 4rem;
+}
+
+
+
+@media (min-width: 768px) {
+  .contenedor {
+    flex-direction: row; 
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: #ffffffaa;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
