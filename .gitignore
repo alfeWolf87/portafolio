@@ -1,4 +1,18 @@
+# Python (Oculta carpetas de ejecución y entornos)
 __pycache__/
 *.pyc
+.venv/
+venv/
+
+# Seguridad (Oculta tus credenciales/API Keys)
 .env
-resultados_sentimiento.csv
+.secret
+
+# Datos del reto técnico (Evita subir bases de datos locales)
+*.csv
+faces_db.pkl
+
+# Sistema Operativo y Editores
+.vscode/
+Thumbs.db
+.DS_Store
