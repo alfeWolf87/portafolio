@@ -4,60 +4,88 @@
   --y: 0px;
 }
 
+html{
+  font-size: 16px;
+}
+
 body {
   margin: 0;
     min-height: 100vh;
-    background-color: #0a0829; /* Fondo oscuro (estilo Slate/Tailwind) */
-    
-    /* Creamos una capa superior fija que ocupe toda la pantalla */
+    background-color: #0a0829;
     background-image: radial-gradient(
       600px circle at var(--x) var(--y), 
       #1d4ed826, /* Color del destello (azul con opacidad baja) */
       transparent 80%
     );
-    
-    /* Asegura que el gradiente no se repita y se mueva suavemente */
+
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Arial', snas-serif;
 }
 
 h1, h2, h3, p {
-  margin: 10px; color: #ffffffaa; text-align: left; font-family: 'Arial', sans-serif;
+  margin: 10px;
+  color: #ffffffaa;
+  text-align: left;
+  font-family:'Arial', sans-serif;
+  word-wrap: break-work;
 }
 
 .contenedor-principal {
   display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 75px auto;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .barra-lateral {
   position: static;
   top: 0;
-  max-height: 100vh;
-  width: 55%;
-  padding: 4rem;
+  width: 100%;
+  padding: 2rem 1rem;
 }
 
-
-
-@media (min-width: 768px) {
-  .contenedor {
-    flex-direction: row; 
-  }
+.contenedor-derecho{
+  width: 100%;
+  padding: 1rem;
 }
+
+section{
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+section div {
+margin-botton: 1.5rem;
+padding-bottom: 1rem;
+border-bottom: 1px solid #333333;
+}
+
+section div:last-child {
+  border-bottom: none;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #ffffffaa;
+  border-top: 1px solid #33333333;
+}
+
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: #333333;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 ul li {
-  float: left;
+  flex: 1;
+  min-width: 100px;
 }
 
 ul li a {
@@ -67,8 +95,166 @@ ul li a {
   padding: 14px 16px;
   text-decoration: none;
   font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease;
 }
 
 ul li a:hover {
   background-color: #111111;
+}
+
+/* Media Queries para Responsividad */
+
+/* Tablets: 768px y superiores */
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .contenedor-principal {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .barra-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100vh;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+
+  .contenedor-derecho {
+    margin-left: 25%;
+    width: 75%;
+    padding: 2rem;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Desktops grandes: 1024px y superiores */
+@media (min-width: 1024px) {
+  .barra-lateral {
+    width: 20%;
+    padding: 3rem 2rem;
+  }
+
+  .contenedor-derecho {
+    margin-left: 20%;
+    width: 80%;
+    padding: 3rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
+}
+
+/* Móviles: menos de 480px */
+@media (max-width: 479px) {
+  html {
+    font-size: 14px;
+  }
+
+  .barra-lateral {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    margin: 5px 0;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  ul li a {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+
+  .contenedor-derecho {
+    padding: 1rem;
+  }
+}
+
+/* Dispositivos medianos: 480px a 767px (tablets pequeñas) */
+@media (min-width: 480px) and (max-width: 767px) {
+  html {
+    font-size: 15px;
+  }
+
+  .contenedor-principal {
+    flex-direction: column;
+  }
+
+  .barra-lateral {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .contenedor-derecho {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    margin: 8px 0;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  ul li {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  ul li a {
+    padding: 12px 10px;
+    font-size: 0.9rem;
+  }
 }
